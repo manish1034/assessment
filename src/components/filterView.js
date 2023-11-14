@@ -50,20 +50,23 @@ const FilterView = ({ group, order }) => {
         icon.push("Done");
         icon.push("Canceled");
         setStatusTab([...new Set(icon)])
+        setTicketTabs([...new Set(icon)]);
+        setOriginal({
+          originalTickets : response.data.tickets,
+          originalUsers : response.data.users,
+          originalTicketTabs : [...new Set(icon)]
+        })
       }else{
+        setOriginal({
+          originalTickets : response.data.tickets,
+          originalUsers : response.data.users,
+          originalTicketTabs : [...new Set(filteredData)]
+        })
         setTicketTabs([...new Set(filteredData)]);
-        console.log(filteredData);
       }
-    setOriginal({
-      originalTickets : response.data.tickets,
-      originalUsers : response.data.users,
-      originalTicketTabs : [...new Set(filteredData)]
-    })
     setTicket(response.data.tickets);
     setUser(response.data.users);
   };
-
-
   useEffect(() => {
     data();
   }, [group]);
@@ -131,6 +134,7 @@ const FilterView = ({ group, order }) => {
       else {
         setTicket(original.originalTickets);
         setTicketTabs([...original.originalTicketTabs]);
+        setStatusTab([...original.originalTicketTabs]);
       }
     }
 
