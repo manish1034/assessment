@@ -7,7 +7,7 @@ const Home = () => {
   const [menu, setMenu] = useState(false);
   
   const [filter, setFilter] = useState({
-    grouping: "",
+    grouping: "status",
     ordering: "",
   });
   const handleChange = (e) => {
