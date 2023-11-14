@@ -31,7 +31,7 @@ const Home = () => {
                     </select>
                 </div>
                 <div className='main-select'><span className='text'>Ordering</span> 
-                    <select className='select' name='ordering' onChange={handleChange}>
+                    <select className='select' name='ordering' onChange={handleChange} value={filter.ordering}>
                         <option value=''>no order</option>
                         <option value='title'>Title</option>
                         <option value='priority'>Priority</option>
