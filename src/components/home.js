@@ -24,7 +24,7 @@ const Home = () => {
             {menu && (
             <div className='open-menu'>
                 <div className='main-select'><span className='text'>Grouping</span> 
-                    <select className='select' value={filter.grouping} name='grouping' onChange={handleChange}>
+                    <select className='select' value={filter.grouping} name='grouping' onClick={() => setFilter({...filter, ordering:""})} onChange={handleChange}>
                         <option value='status'>Status</option>
                         <option value='userId'>User</option>
                         <option value='priority'>Priority</option>
