@@ -159,7 +159,7 @@ const FilterView = ({ group, order }) => {
             <div style={{display: "flex", flexDirection: "column", }}>
               <div style={{display: "flex", justifyContent: "space-between", marginBottom: "24px", width: "16rem"}}>
                 <div style={{ display: "flex", alignItems:"center", gap: 10, fontSize: "16px", margin: "0px 4px"}}>
-                  {statusIcons.filter((i,index) => i[item])[0][item]} {item}
+                  {statusIcons.filter((i,index) => i[item]) && statusIcons.filter((i,index) => i[item])[0][item]}{item}
                 </div>
                 <div><AiOutlinePlus style={{color: "#6b6b6b", marginRight: "6px"}}/><PiDotsThreeBold style={{color: "#6b6b6b"}}/></div>
               </div>
