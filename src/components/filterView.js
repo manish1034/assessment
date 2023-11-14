@@ -134,7 +134,7 @@ const FilterView = ({ group, order }) => {
       else {
         setTicket(original.originalTickets);
         setTicketTabs([...original.originalTicketTabs]);
-        setStatusTab([...original.originalTicketTabs]);
+        // setStatusTab([...original.originalTicketTabs]);
       }
     }
 
